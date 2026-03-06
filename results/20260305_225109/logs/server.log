@@ -1,0 +1,3 @@
+    Finished `release` profile [optimized] target(s) in 0.06s
+     Running `target/release/server --addr '127.0.0.1:8080'`
+Benchmark server listening on 127.0.0.1:8080
