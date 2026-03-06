@@ -1,0 +1,132 @@
+    Finished `release` profile [optimized] target(s) in 0.07s
+     Running `target/release/client --server 'http://127.0.0.1:8080' --output results/20260305_230956 --warmup 5 --warmup-min-ops 10 --duration 15 --rps 3`
+=== Streaming Benchmark Client ===
+Server: http://127.0.0.1:8080
+RPS: 3, Duration: 15s, Warmup: 5s
+Total cases to run: 42
+
+=== Theoretical Throughput Estimates ===
+
+  Pipeline stage upper bounds (single-core, typical modern CPU):
+  ---------------------------------------------------------------
+  Loopback network (localhost):  ~20-40 Gbps
+  Random byte gen (ChaCha20):    ~1.5-3.0 GB/s  = ~12-24 Gbps
+  SHA-512 (software):            ~1.5-2.5 GB/s  = ~12-20 Gbps
+  AES-256-GCM (AES-NI):          ~4-8 GB/s      = ~32-64 Gbps
+  Memory copy/alloc overhead:     ~8-15 GB/s     = ~64-120 Gbps
+
+  Upload bottleneck:   SHA-512 + AES-GCM on critical path
+  -> Expected peak:    ~8-12 Gbps (limited by SHA-512 + encrypt combined)
+
+  Download bottleneck: Random byte generation + network
+  -> Expected peak:    ~12-20 Gbps (limited by RNG throughput)
+
+  Per-chunk overhead hypothesis:
+  - 1 MiB chunks:  highest per-chunk overhead, more SHA/AES init cycles
+  - 8-32 MiB:      expected sweet spot (amortized overhead)
+  - 64 MiB:        may increase tail latency from buffer pressure
+  ---------------------------------------------------------------
+
+Server health check: OK
+
+[1/42] Upload - File: 10 MiB, Chunk: 1 MiB
+  Warming up (5 seconds or 10 ops)...
+    Warmup: 50 ops, 3s elapsed
+  Warmup complete: 74 ops in 5.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=97.5ms p99=101.2ms | p50 tp=859.1 Mbps | err=0.0%
+
+[2/42] Upload - File: 10 MiB, Chunk: 2 MiB
+  Warming up (5 seconds or 10 ops)...
+    Warmup: 50 ops, 3s elapsed
+  Warmup complete: 76 ops in 5.1s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=96.3ms p99=104.1ms | p50 tp=865.3 Mbps | err=0.0%
+
+[3/42] Upload - File: 10 MiB, Chunk: 4 MiB
+  Warming up (5 seconds or 10 ops)...
+    Warmup: 50 ops, 3s elapsed
+  Warmup complete: 75 ops in 5.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=94.0ms p99=103.0ms | p50 tp=888.8 Mbps | err=0.0%
+
+[4/42] Upload - File: 10 MiB, Chunk: 8 MiB
+  Warming up (5 seconds or 10 ops)...
+    Warmup: 50 ops, 3s elapsed
+  Warmup complete: 72 ops in 5.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=99.7ms p99=107.9ms | p50 tp=840.7 Mbps | err=0.0%
+
+[5/42] Upload - File: 10 MiB, Chunk: 16 MiB
+  Warming up (5 seconds or 10 ops)...
+    Warmup: 50 ops, 3s elapsed
+  Warmup complete: 70 ops in 5.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=102.3ms p99=111.1ms | p50 tp=820.7 Mbps | err=0.0%
+
+[6/42] Upload - File: 10 MiB, Chunk: 32 MiB
+  Warming up (5 seconds or 10 ops)...
+    Warmup: 50 ops, 3s elapsed
+  Warmup complete: 67 ops in 5.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=99.8ms p99=114.5ms | p50 tp=840.2 Mbps | err=0.0%
+
+[7/42] Upload - File: 10 MiB, Chunk: 64 MiB
+  Warming up (5 seconds or 10 ops)...
+    Warmup: 50 ops, 3s elapsed
+  Warmup complete: 69 ops in 5.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=100.5ms p99=102.2ms | p50 tp=835.1 Mbps | err=0.0%
+
+[8/42] Upload - File: 100 MiB, Chunk: 1 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 10 ops in 6.8s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=711.7ms p99=721.9ms | p50 tp=1179.6 Mbps | err=0.0%
+
+[9/42] Upload - File: 100 MiB, Chunk: 2 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 10 ops in 7.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=714.2ms p99=723.5ms | p50 tp=1174.5 Mbps | err=0.0%
+
+[10/42] Upload - File: 100 MiB, Chunk: 4 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 10 ops in 7.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=715.3ms p99=724.5ms | p50 tp=1173.5 Mbps | err=0.0%
+
+[11/42] Upload - File: 100 MiB, Chunk: 8 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 10 ops in 7.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=715.3ms p99=732.7ms | p50 tp=1173.5 Mbps | err=0.0%
+
+[12/42] Upload - File: 100 MiB, Chunk: 16 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 10 ops in 7.0s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=716.3ms p99=727.6ms | p50 tp=1171.5 Mbps | err=0.0%
+
+[13/42] Upload - File: 100 MiB, Chunk: 32 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 10 ops in 7.1s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=725.0ms p99=735.2ms | p50 tp=1158.1 Mbps | err=0.0%
+
+[14/42] Upload - File: 100 MiB, Chunk: 64 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 10 ops in 7.2s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=733.7ms p99=752.6ms | p50 tp=1143.8 Mbps | err=0.0%
+
+[15/42] Upload - File: 1000 MiB, Chunk: 1 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 2 ops in 14.3s
+  Running measured phase (15 seconds at 3 RPS)...
+  Done: 46 requests | p50=95879.2ms p99=106889.2ms | p50 tp=87.5 Mbps | err=8.7%
+
+[16/42] Upload - File: 1000 MiB, Chunk: 2 MiB
+  Warming up (5 seconds or 10 ops)...
+  Warmup complete: 2 ops in 15.0s
+  Running measured phase (15 seconds at 3 RPS)...

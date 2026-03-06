@@ -1,0 +1,212 @@
+[
+  {
+    "case": {
+      "operation": "Upload",
+      "file_size_mib": 100,
+      "chunk_size_mib": 1
+    },
+    "warmup_complete": true,
+    "total_requests": 46,
+    "successful_requests": 46,
+    "failed_requests": 0,
+    "latency": {
+      "p50_ms": 613.887,
+      "p95_ms": 622.079,
+      "p99_ms": 645.631,
+      "p999_ms": 645.631
+    },
+    "throughput": {
+      "p50_mbps": 1367.039,
+      "p95_mbps": 1385.471,
+      "p99_mbps": 1412.095,
+      "p999_mbps": 1412.095
+    },
+    "resources": {
+      "avg_cpu_percent": 28.89314842224121,
+      "peak_cpu_percent": 28.89314842224121,
+      "avg_mem_bytes": 15356805120,
+      "peak_mem_bytes": 15356805120,
+      "error_rate_percent": 0.0
+    }
+  },
+  {
+    "case": {
+      "operation": "Upload",
+      "file_size_mib": 100,
+      "chunk_size_mib": 2
+    },
+    "warmup_complete": true,
+    "total_requests": 46,
+    "successful_requests": 46,
+    "failed_requests": 0,
+    "latency": {
+      "p50_ms": 619.519,
+      "p95_ms": 627.711,
+      "p99_ms": 628.223,
+      "p999_ms": 628.223
+    },
+    "throughput": {
+      "p50_mbps": 1354.751,
+      "p95_mbps": 1366.015,
+      "p99_mbps": 1371.135,
+      "p999_mbps": 1371.135
+    },
+    "resources": {
+      "avg_cpu_percent": 28.560279846191406,
+      "peak_cpu_percent": 28.560279846191406,
+      "avg_mem_bytes": 15244509184,
+      "peak_mem_bytes": 15244509184,
+      "error_rate_percent": 0.0
+    }
+  },
+  {
+    "case": {
+      "operation": "Upload",
+      "file_size_mib": 100,
+      "chunk_size_mib": 4
+    },
+    "warmup_complete": true,
+    "total_requests": 46,
+    "successful_requests": 46,
+    "failed_requests": 0,
+    "latency": {
+      "p50_ms": 634.879,
+      "p95_ms": 640.511,
+      "p99_ms": 644.607,
+      "p999_ms": 644.607
+    },
+    "throughput": {
+      "p50_mbps": 1321.983,
+      "p95_mbps": 1336.319,
+      "p99_mbps": 1342.463,
+      "p999_mbps": 1342.463
+    },
+    "resources": {
+      "avg_cpu_percent": 30.088287353515625,
+      "peak_cpu_percent": 30.088287353515625,
+      "avg_mem_bytes": 15413575680,
+      "peak_mem_bytes": 15413575680,
+      "error_rate_percent": 0.0
+    }
+  },
+  {
+    "case": {
+      "operation": "Upload",
+      "file_size_mib": 100,
+      "chunk_size_mib": 8
+    },
+    "warmup_complete": true,
+    "total_requests": 46,
+    "successful_requests": 46,
+    "failed_requests": 0,
+    "latency": {
+      "p50_ms": 653.823,
+      "p95_ms": 659.967,
+      "p99_ms": 664.063,
+      "p999_ms": 664.063
+    },
+    "throughput": {
+      "p50_mbps": 1284.095,
+      "p95_mbps": 1291.263,
+      "p99_mbps": 1295.359,
+      "p999_mbps": 1295.359
+    },
+    "resources": {
+      "avg_cpu_percent": 29.277254104614258,
+      "peak_cpu_percent": 29.277254104614258,
+      "avg_mem_bytes": 15603761152,
+      "peak_mem_bytes": 15603761152,
+      "error_rate_percent": 0.0
+    }
+  },
+  {
+    "case": {
+      "operation": "Upload",
+      "file_size_mib": 100,
+      "chunk_size_mib": 16
+    },
+    "warmup_complete": true,
+    "total_requests": 46,
+    "successful_requests": 46,
+    "failed_requests": 0,
+    "latency": {
+      "p50_ms": 668.159,
+      "p95_ms": 673.791,
+      "p99_ms": 682.495,
+      "p999_ms": 682.495
+    },
+    "throughput": {
+      "p50_mbps": 1256.447,
+      "p95_mbps": 1265.663,
+      "p99_mbps": 1270.783,
+      "p999_mbps": 1270.783
+    },
+    "resources": {
+      "avg_cpu_percent": 29.582162857055664,
+      "peak_cpu_percent": 29.582162857055664,
+      "avg_mem_bytes": 15619620864,
+      "peak_mem_bytes": 15619620864,
+      "error_rate_percent": 0.0
+    }
+  },
+  {
+    "case": {
+      "operation": "Upload",
+      "file_size_mib": 100,
+      "chunk_size_mib": 32
+    },
+    "warmup_complete": true,
+    "total_requests": 46,
+    "successful_requests": 46,
+    "failed_requests": 0,
+    "latency": {
+      "p50_ms": 686.591,
+      "p95_ms": 695.295,
+      "p99_ms": 696.831,
+      "p999_ms": 696.831
+    },
+    "throughput": {
+      "p50_mbps": 1222.655,
+      "p95_mbps": 1230.847,
+      "p99_mbps": 1240.063,
+      "p999_mbps": 1240.063
+    },
+    "resources": {
+      "avg_cpu_percent": 29.01178550720215,
+      "peak_cpu_percent": 29.01178550720215,
+      "avg_mem_bytes": 16115957760,
+      "peak_mem_bytes": 16115957760,
+      "error_rate_percent": 0.0
+    }
+  },
+  {
+    "case": {
+      "operation": "Upload",
+      "file_size_mib": 100,
+      "chunk_size_mib": 64
+    },
+    "warmup_complete": true,
+    "total_requests": 46,
+    "successful_requests": 46,
+    "failed_requests": 0,
+    "latency": {
+      "p50_ms": 709.119,
+      "p95_ms": 717.311,
+      "p99_ms": 719.871,
+      "p999_ms": 719.871
+    },
+    "throughput": {
+      "p50_mbps": 1182.719,
+      "p95_mbps": 1192.959,
+      "p99_mbps": 1196.031,
+      "p999_mbps": 1196.031
+    },
+    "resources": {
+      "avg_cpu_percent": 27.960458755493164,
+      "peak_cpu_percent": 27.960458755493164,
+      "avg_mem_bytes": 15708831744,
+      "peak_mem_bytes": 15708831744,
+      "error_rate_percent": 0.0
+    }
+  }
+]
